@@ -36,4 +36,8 @@ jobs:
       # run tests!
       - run: node --version
 
-      - run: yarn test:coverage
+      # - run: yarn test:coverage
+
+      - deploy:
+          name: Deploy Over SSH
+          command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/beta/ myuser@mysite.org:~/domains/mysite.org/html/beta
