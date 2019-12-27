@@ -38,6 +38,6 @@ jobs:
 
       # - run: yarn test:coverage
 
-      - deploy: scp ../halo.html root@111.229.47.26:/root/werobot
-      #     name: Deploy Over SSH
-      #     command: rsync -e "ssh -o StrictHostKeyChecking=no" -arvc --exclude .git ~/beta/ myuser@mysite.org:~/domains/mysite.org/html/beta
+      - deploy: 
+          name: Deploy Over SSH
+          command: scp ../halo.html root@111.229.47.26:/root/werobot
