@@ -40,4 +40,7 @@ jobs:
 
       - deploy: 
           name: Deploy Over SSH
-          command: scp ../halo.html root@111.229.47.26:/root/werobot
+          command: rsync ../halo.html 111.229.47.26:/root/werobot
+            
+            
+            #scp ../halo.html root@111.229.47.26:/root/werobot
